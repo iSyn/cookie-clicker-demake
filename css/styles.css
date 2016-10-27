@@ -58,14 +58,11 @@ body {
   background-color: white;
   margin: 0 auto;
   margin-top: 10px;
+  margin-bottom: 10px;
   width: 97%;
   height: 70px;
   border: 1px solid black;
   cursor: pointer;
   text-align: center;
   padding-top: 30px;
-}
-
-.upgrades:hover {
-  background-color: darkgrey;
 }
