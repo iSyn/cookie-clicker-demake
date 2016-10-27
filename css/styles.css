@@ -42,14 +42,16 @@ body {
 }
 
 .upgrade-area {
-  overflow: scroll;
+  position: relative;
+  overflow: auto;
   background-color: lightslategray;
 }
 
 .upgrade-header {
   text-align: center;
-  font-size: 20px;
+  font-size: 40px;
   background-color: gainsboro;
+  border-bottom: 1px solid darkslategrey;
 }
 
 .upgrades {
@@ -62,4 +64,8 @@ body {
   cursor: pointer;
   text-align: center;
   padding-top: 30px;
+}
+
+.upgrades:hover {
+  background-color: darkgrey;
 }
