@@ -1,49 +1,57 @@
-header {
+body {
+  background: whitesmoke;
+}
+
+.header {
+  font-size: 100px;
   text-align: center;
-  font-size: 80px;
+  color: darkslategrey;
+  height: 15vh;
+  line-height: 15vh;
 }
 
 .container {
   display: flex;
-  flex-flow: row;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-around;
 }
 
-.sections {
-  width: 33%;
-  height: 80vh;
-}
-
-.text-area {
+.section {
   border: 1px solid black;
+  height: 80vh;
+  width: 32%;
 }
 
-.cookie-area {
-
+.footer-shit {
+  height: 5vh;
+  text-align: center;
+  line-height: 5vh;
 }
 
 .cookie {
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  top: 20vh;
-  height: 300px;
-  width: 300px;
-  border-radius: 100%;
-  background-color: brown;
-  cursor: pointer;
+  margin: 0 auto;
+  top: 25%;
+  height: 350px;
+  width: 350px;
+  background: saddlebrown;
+  border-radius: 50%;
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .upgrade-area {
-  border: 1px solid black;
+  overflow: scroll;
 }
 
 .upgrade {
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 97%;
+  height: 70px;
   border: 1px solid black;
   cursor: pointer;
-  width: 98%;
-  height: 50px;
-  border: 1px solid black;
-  margin: 5px auto;
+  text-align: center;
+  padding-top: 30px;
 }
