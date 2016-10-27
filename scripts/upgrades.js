@@ -18,6 +18,7 @@ $(() => {
       if (currentAmount >= 10) {
         upgradeOneLocked = false
         $('.upgrade1-name').text('Cursor')
+
       }
     } else if (upgradeTwoLocked === true) {
       if (currentAmount >= 100) {
