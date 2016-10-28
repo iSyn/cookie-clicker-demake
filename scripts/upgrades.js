@@ -65,9 +65,9 @@ $(() => {
 
   $upgradeClickThree.click(() => {
     if (upgradeMouseClickThree === false) {
-      if (currentAmount >= 7000) {
+      if (currentAmount >= 4000) {
         upgradeMouseClickThree = true
-        currentAmount -= 7000
+        currentAmount -= 4000
         cookiesPerClick *= 5
         updateCookies()
         $upgradeClickThree.css('background', 'darkgrey')
