@@ -1,7 +1,7 @@
 $(() => {
   console.log('upgrades.js is linked')
 
-  let currentAmount = 100
+  let currentAmount = 0
   let cookiesPerClick = 1
   let cookiesPerSecond = 0
   let cookiesPerSecondUpgradePrice = 10
@@ -9,6 +9,7 @@ $(() => {
   let getCookiesPerSecondFunction = false
 
   const $cookie = $('.cookie')
+
   const $upgradeClickOne = $('.upgrade-click-one')
   const $upgradeClickTwo = $('.upgrade-click-two')
   const $upgradeClickThree = $('.upgrade-click-three')
@@ -64,9 +65,9 @@ $(() => {
 
   $upgradeClickThree.click(() => {
     if (upgradeMouseClickThree === false) {
-      if (currentAmount >= 50000) {
+      if (currentAmount >= 7000) {
         upgradeMouseClickThree = true
-        currentAmount -= 50000
+        currentAmount -= 7000
         cookiesPerClick *= 5
         updateCookies()
         $upgradeClickThree.css('background', 'darkgrey')
@@ -76,9 +77,9 @@ $(() => {
 
   $upgradeClickFour.click(() => {
     if (upgradeMouseClickFour === false) {
-      if (currentAmount >= 500000) {
+      if (currentAmount >= 50000) {
         upgradeMouseClickFour = true
-        currentAmount -= 500000
+        currentAmount -= 50000
         cookiesPerClick *= 5
         updateCookies()
         $upgradeClickFour.css('background', 'darkgrey')
@@ -88,9 +89,9 @@ $(() => {
 
   $upgradeClickFive.click(() => {
     if (upgradeMouseClickFive === false) {
-      if (currentAmount >= 100000) {
+      if (currentAmount >= 500000) {
         upgradeMouseClickFive = true
-        currentAmount -= 50000
+        currentAmount -= 500000
         cookiesPerClick *= 10
         updateCookies()
         $upgradeClickFive.css('background', 'darkgrey')
@@ -178,7 +179,7 @@ $(() => {
     if (currentAmount >= grandmaUpgradePrice) {
       currentAmount -= grandmaUpgradePrice
       grandmaUpgradePrice += 10
-      cookiesPerSecond += 5
+      cookiesPerSecond += 1
       updateCookies()
       if (getCookiesPerSecondFunction === false) {
         getCookiesPerSecondFunction = true
@@ -186,6 +187,8 @@ $(() => {
       }
     }
   })
+
+
 
 
 
