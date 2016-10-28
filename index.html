@@ -20,7 +20,7 @@
         <div class='current-amount-text'> You have <span class='current-amount'> 0 </span> cookies </div>
         <hr>
         <div class='amount-per-click-text'> <span class='amount-per-click'> 1 </span> cookies per click </div>
-        <div class='amount-per-second-text'> <span class='amount-per-second'> 0 </span> cookies per second </div>
+        <div class='amount-per-second-text'> <span class='amount-per-second'> 0.0 </span> cookies per second </div>
       </div>
 
       <div class='section cookie-area'>
@@ -30,39 +30,73 @@
       <div class='section upgrade-area'>
         <div class='upgrade-header'> Store </div>
         <div class='upgrade-mouse-click-area'>
-          <div class='upgrade-click upgrade-click-one'></div>
-          <div class='upgrade-click upgrade-click-two'></div>
-          <div class='upgrade-click upgrade-click-three'></div>
-          <div class='upgrade-click upgrade-click-four'></div>
-          <div class='upgrade-click upgrade-click-five'></div>
+          <div class='upgrade-click upgrade-click-one'>
+            <div class='upgrades-info upgrade-click-one-info'>
+              <h1> Silver Cursor </h1>
+              <p> Price: 50 cookies </p>
+              <p> Doubles the amount of cookies per click </p>
+            </div>
+          </div>
+          <div class='upgrade-click upgrade-click-two'>
+            <div class='upgrades-info upgrade-click-two-info'>
+              <h1> Golden Cursor </h1>
+              <p> Price: 500 cookies </p>
+              <p> Triples the amount of cookies per click </p>
+            </div>
+          </div>
+          <div class='upgrade-click upgrade-click-three'>
+            <div class='upgrades-info upgrade-click-three-info'>
+              <h1> Platinum Cursor </h1>
+              <p> Price: 7000 cookies </p>
+              <p> 5x the amount of cookies per click </p>
+            </div>
+          </div>
+          <div class='upgrade-click upgrade-click-four'>
+            <div class='upgrades-info upgrade-click-four-info'>
+              <h1> Diamond Cursor </h1>
+              <p> Price: 50000 cookies </p>
+              <p> 5x the amount of cookies per click </p>
+            </div>
+          </div>
+          <div class='upgrade-click upgrade-click-five'>
+            <div class='upgrades-info upgrade-click-five-info'>
+              <h1> Legendary Cursor </h1>
+              <p> Price: 500000 cookies </p>
+              <p> 5x the amount of cookies per click </p>
+            </div>
+          </div>
         </div>
-        <div class='upgrades'>
-          <div class='upgrade1-name'> ??? </div>
+        <div class='upgrades upgrade1'>
+          <div class='upgrade1-name'> Cursor </div>
           <br>
-          Cost: 10 cookies
+          <div class='upgrade1-price'> Cost: 10 cookies </div>
+          <div class='upgrades-info upgrade1-info'>
+            <h1> Cursor </h1>
+            <p> The cursor helps you click the cookie </p>
+          </div>
         </div>
-        <div class='upgrades'>
-          <div class='upgrade2-name'> ??? </div>
+        <div class='upgrades upgrade2 not-implemented'>
+          <div class='upgrade2-name'> Grandma </div>
           <br>
-          Cost: 100 cookies
+          <div class='price'> Cost: 100 cookies </div>
         </div>
-        <div class='upgrades'>
-          <div class='upgrade3-name'> ??? </div>
+        <div class='upgrades upgrade3 not-implemented'>
+          <div class='upgrade3-name'> Farm </div>
           <br>
           Cost: 1000 cookies
         </div>
-        <div class='upgrades'>
-          <div class='upgrade4-name'> ??? </div>
+        <div class='upgrades upgrade4 not-implemented'>
+          <div class='upgrade4-name'> Mine </div>
           <br>
           Cost: 10000 cookies
         </div>
-        <div class='upgrades'>
-          <div class='upgrade5-name'> ??? </div>
+        <div class='upgrades upgrade5 not-implemented'>
+          <div class='upgrade5-name'> Factory </div>
           <br>
           Cost: 100000 cookies
         </div>
-        <div class='upgrades'>
-          <div class='upgrade6-name'> ??? </div>
+        <div class='upgrades upgrade6 not-implemented'>
+          <div class='upgrade6-name'> Time Travel </div>
           <br>
           Cost: 1000000 cookies
         </div>
@@ -70,8 +104,9 @@
 
     </div> <!-- container -->
 
-    <footer class='footer-shit'> &copy Synclair Wang 2016 </footer>
+    <footer class='footer-shit'><a href='http://synclairwang.com'> &copy Synclair Wang 2016 </a></footer>
 
+    <script src="scripts/jQuery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <script src="scripts/upgrades.js"></script>
 
