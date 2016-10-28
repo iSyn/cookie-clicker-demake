@@ -1,12 +1,13 @@
 $(() => {
   console.log('upgrades.js is linked')
 
-  let currentAmount = 1000000
+  let currentAmount = 100
   let cookiesPerClick = 1
   let cookiesPerSecond = 0
   let cookiesPerSecondUpgradePrice = 10
   let grandmaUpgradePrice = 100
   let getCookiesPerSecondFunction = false
+
   const $cookie = $('.cookie')
   const $upgradeClickOne = $('.upgrade-click-one')
   const $upgradeClickTwo = $('.upgrade-click-two')
@@ -21,10 +22,11 @@ $(() => {
   let upgradeMouseClickFive = false
 
   const updateCookies = () => {
-    $('.current-amount').text(currentAmount)
+    $('.current-amount').text(currentAmount.toFixed(0))
     $('.amount-per-click').text(cookiesPerClick)
     $('.amount-per-second').text(cookiesPerSecond.toFixed(1))
-    $('.upgrade1-price').text(`Cost: ${cookiesPerSecondUpgradePrice} cookies`)
+    $('.upgrade1-price').text('Cost: ' + cookiesPerSecondUpgradePrice.toFixed(1) + ' cookies')
+    $('.upgrade2-price').text('Cost: ' + grandmaUpgradePrice.toFixed(1) + ' cookies')
   }
 
   $cookie.click(() => {
@@ -114,7 +116,8 @@ $(() => {
   $('.upgrade1').click(() => {
     if (currentAmount >= cookiesPerSecondUpgradePrice) {
       currentAmount -= cookiesPerSecondUpgradePrice
-      cookiesPerSecondUpgradePrice = Math.floor(cookiesPerSecondUpgradePrice += 2)
+      cookiesPerSecondUpgradePrice *= 1.005
+
       cookiesPerSecond += 0.2
 
       updateCookies()
@@ -174,7 +177,7 @@ $(() => {
   $('.upgrade2').click(() => {
     if (currentAmount >= grandmaUpgradePrice) {
       currentAmount -= grandmaUpgradePrice
-      grandmaUpgradePrice = Math.floor(grandmaUpgradePrice += 10)
+      grandmaUpgradePrice += 10
       cookiesPerSecond += 5
       updateCookies()
       if (getCookiesPerSecondFunction === false) {
