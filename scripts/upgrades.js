@@ -1,10 +1,11 @@
 $(() => {
   console.log('upgrades.js is linked')
 
-  let currentAmount = 0
+  let currentAmount = 1000000
   let cookiesPerClick = 1
   let cookiesPerSecond = 0
   let cookiesPerSecondUpgradePrice = 10
+  let grandmaUpgradePrice = 100
   let getCookiesPerSecondFunction = false
   const $cookie = $('.cookie')
   const $upgradeClickOne = $('.upgrade-click-one')
@@ -88,16 +89,12 @@ $(() => {
       if (currentAmount >= 100000) {
         upgradeMouseClickFive = true
         currentAmount -= 50000
-        cookiesPerClick *= 5
+        cookiesPerClick *= 10
         updateCookies()
         $upgradeClickFive.css('background', 'darkgrey')
       }
     }
   })
-
-  const upgradeCookiesPerSecond = () => {
-    cookiesPerSecond += 0.2
-  }
 
   const getCookiesPerSecond = () => {
     counter = 0
@@ -111,11 +108,15 @@ $(() => {
     }, 1000)
   }
 
+
+
+
   $('.upgrade1').click(() => {
     if (currentAmount >= cookiesPerSecondUpgradePrice) {
       currentAmount -= cookiesPerSecondUpgradePrice
       cookiesPerSecondUpgradePrice = Math.floor(cookiesPerSecondUpgradePrice += 2)
-      upgradeCookiesPerSecond()
+      cookiesPerSecond += 0.2
+
       updateCookies()
       if (getCookiesPerSecondFunction === false) {
         getCookiesPerSecondFunction = true
@@ -169,5 +170,20 @@ $(() => {
   $('.upgrade-click-five').mouseout(() => {
     $('.upgrade-click-five-info').css('display', 'none')
   })
+
+  $('.upgrade2').click(() => {
+    if (currentAmount >= grandmaUpgradePrice) {
+      currentAmount -= grandmaUpgradePrice
+      grandmaUpgradePrice = Math.floor(grandmaUpgradePrice += 10)
+      cookiesPerSecond += 5
+      updateCookies()
+      if (getCookiesPerSecondFunction === false) {
+        getCookiesPerSecondFunction = true
+        getCookiesPerSecond()
+      }
+    }
+  })
+
+
 
 })
